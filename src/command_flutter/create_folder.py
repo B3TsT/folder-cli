@@ -8,11 +8,27 @@ class CreateFolder:
 
     @staticmethod
     def common():
-        click.echo('Ejecutando common de flutter')
+        nombre_carpeta='common'
+        try:
+            carpeta_data = CarpetaHelper.buscar_carpeta(nombre_carpeta=nombre_carpeta)
+        except click.ClickException as e:
+            click.echo(str(e))
+            return
+        carpetas_flutter = ['widgets', 'styles']
+        click.echo(f'Carpeta seleccionada: {nombre_carpeta}')
+        CarpetaHelper.crear(nombre_proyecto=carpeta_data, carpetas=carpetas_flutter, nombre_carpeta='')
         
     @staticmethod
     def core():
-        click.echo('Ejecutando core de flutter')  
+        nombre_carpeta='core'
+        try:
+            carpeta_data = CarpetaHelper.buscar_carpeta(nombre_carpeta=nombre_carpeta)
+        except click.ClickException as e:
+            click.echo(str(e))
+            return
+        carpetas_flutter = ['services', 'utils', 'router', 'foundations', 'bloc']
+        click.echo(f'Carpeta seleccionada: {nombre_carpeta}')
+        CarpetaHelper.crear(nombre_proyecto=carpeta_data, carpetas=carpetas_flutter, nombre_carpeta='') 
         
     @staticmethod
     def data():
@@ -23,13 +39,21 @@ class CreateFolder:
             click.echo(str(e))
             return
         # nombre_carpeta = click.prompt('Nombre de la carpeta en "data"', type=str)
-        carpetas_flutter = ['datasources', 'models', 'repositories', 'http']
+        carpetas_flutter = ['datasources', 'repositories', 'http']
         click.echo(f'Carpeta seleccionada: {nombre_carpeta}')
         CarpetaHelper.crear(nombre_proyecto=carpeta_data, carpetas=carpetas_flutter, nombre_carpeta='')
         
     @staticmethod
     def domain():
-        click.echo('Ejecutando domain de flutter')
+        nombre_carpeta='domain'
+        try:
+            carpeta_data = CarpetaHelper.buscar_carpeta(nombre_carpeta=nombre_carpeta)
+        except click.ClickException as e:
+            click.echo(str(e))
+            return
+        carpetas_flutter = ['entities', 'repositories', 'datasources', 'usecases', 'models', 'either', 'failures']
+        click.echo(f'Carpeta seleccionada: {nombre_carpeta}')
+        CarpetaHelper.crear(nombre_proyecto=carpeta_data, carpetas=carpetas_flutter, nombre_carpeta='')
         
     @staticmethod
     def features():

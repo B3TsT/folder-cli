@@ -45,7 +45,3 @@ Options:
   -f, --features  Crear carpeta y estructura dentro de "features".
   --help          Show this message and exit.
 ```
-* [Ejemplo 2: con tests en una carpeta aparte](python/Project-Example-2)
-* [Ejemplo 3: con scrapy](https://github.com/ssipyga/contratos_argentina)
-* [Ejemplo 4: con django](https://github.com/chadad/propiedades)
-

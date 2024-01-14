@@ -1,7 +1,7 @@
 # Archivo: carpeta_helper.py
 import click
 import os
-from configuracion import Configuracion
+from setting.configuracion import Configuracion
 
 class CarpetaHelper:
     @staticmethod

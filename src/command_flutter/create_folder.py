@@ -66,7 +66,6 @@ class CreateFolder:
 
     @staticmethod
     def command_flutter(common, core, data, domain, features):
-        """Crea carpetas con código por defecto para proyectos Flutter."""
         if common:
             CreateFolder.common()
         elif core:

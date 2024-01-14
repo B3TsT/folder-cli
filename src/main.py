@@ -24,6 +24,7 @@ def config(ruta):
 @click.option('--domain', '-do', is_flag=True, help='Crear carpeta y estructura dentro de "domain".')
 @click.option('--features', '-f', is_flag=True, help='Crear carpeta y estructura dentro de "features".')
 def command_flutter(common, core, data, domain, features):
+    """Crea carpetas con código por defecto para proyectos Flutter."""
     CreateFolder.command_flutter(common=common, core=core, data=data, domain=domain, features=features)     
 
 @cli.command()

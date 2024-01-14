@@ -1,6 +1,72 @@
 # Folder-CLI
 CLI to create folder structures with default code.
-##Python
+
+```
+📂src
+├── 📂common
+│   ├── common.dart
+│   ├── 📂styles
+│   │   └── styles.dart
+│   └── 📂widgets
+│       └── widgets.dart
+├── 📂core
+│   ├── 📂bloc
+│   │   └── bloc.dart
+│   ├── core.dart
+│   ├── 📂foundations
+│   │   └── foundations.dart
+│   ├── 📂router
+│   │   └── router.dart
+│   ├── 📂services
+│   │   └── services.dart
+│   └── 📂utils
+│       └── utils.dart
+├── 📂data
+│   ├── data.dart
+│   ├── 📂datasources
+│   │   └── datasources.dart
+│   ├── 📂http
+│   │   └── http.dart
+│   ├── 📂models
+│   │   └── models.dart
+│   └── 📂repositories
+│       └── repositories.dart
+├── 📂domain
+│   ├── 📂datasources
+│   │   └── datasources.dart
+│   ├── domain.dart
+│   ├── 📂either
+│   │   └── either.dart
+│   ├── 📂entities
+│   │   └── entities.dart
+│   ├── 📂failures
+│   │   └── failures.dart
+│   ├── 📂models
+│   │   └── models.dart
+│   ├── 📂repositories
+│   │   └── repositories.dart
+│   └── 📂usecases
+│       └── usecases.dart
+├── 📂features
+│   ├── features.dart
+│   ├── 📂login
+│   │   ├── 📂data
+│   │   │   └── data.dart
+│   │   ├── 📂domain
+│   │   │   └── domain.dart
+│   │   └── 📂presentation
+│   │       └── presentation.dart
+│   └── 📂register
+│       ├── 📂data
+│       │   └── data.dart
+│       ├── 📂domain
+│       │   └── domain.dart
+│       └── 📂presentation
+│           └── presentation.dart
+└── main.dart
+```
+
+## Python
 
 ### Installation guide:
 It is required to install python to be able to run the program, along with the click package... just that...

@@ -76,16 +76,17 @@ class CreateFolder:
     @staticmethod
     def default():
         numero_carpeta = click.prompt('1. core\n2. features\n3. data\n4. domain\n5. common\n6. todas las carpetas\nSeleccione la carpeta a crear', type=click.IntRange(1, 6))
-
         if numero_carpeta == 6:
             carpetas = ['core', 'features', 'data', 'domain', 'common']
         else:
-            carpetas = [carpeta for carpeta in ['core', 'features', 'data', 'domain', 'common'][:numero_carpeta]]
+            # carpetas = [carpeta for carpeta in ['core', 'features', 'data', 'domain', 'common'][:numero_carpeta]]
+            carpetas = [['core', 'features', 'data', 'domain', 'common'][numero_carpeta-1]]
 
         ruta_proyecto = Configuracion.cargar()
         if not ruta_proyecto:
             raise click.ClickException('La ruta del proyecto no está configurada. Utiliza "config" para configurarla.')
-
+        
+        # print(ruta_proyecto,carpetas, numero_carpeta)
         CarpetaHelper.crear(nombre_proyecto=ruta_proyecto, carpetas=carpetas, nombre_carpeta='')
 
     @staticmethod
